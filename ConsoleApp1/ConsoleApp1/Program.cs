@@ -40,7 +40,7 @@
             {
                 int one = numbers[half];
                 int two = numbers[half + 1];
-                int mediam = (one + two) / 2;
+                double mediam = (one + two) / 2;
             }
             else
             {
