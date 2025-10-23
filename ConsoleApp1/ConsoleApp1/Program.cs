@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System.Runtime.InteropServices.Marshalling;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -46,6 +48,48 @@
             {
                 int mediam = numbers[half];
             }
+
+
+            // Min
+            int ans = 0;
+            Console.Write("n = ");
+            int.TryParse(Console.ReadLine(), out int n2);
+            if (n2 == 0) { Console.WriteLine("No result."); }
+            int i2 = 0;
+            do
+            {
+                Console.Write("a = ");
+                int.TryParse(Console.ReadLine(), out int a);
+                if (i2 == 0 || a < ans)
+                {
+                    ans = a;
+                }
+                i2++;
+            }
+            while (i2 != n2);
+            Console.WriteLine($"Result: {ans}");
+
+
+
+            // Max
+            int answer = 0;
+            Console.Write("n = ");
+            int.TryParse(Console.ReadLine(), out int n3);
+            if (n3 == 0) { Console.WriteLine("No result."); }
+            int i3 = 0;
+            do
+            {
+                Console.Write("a = ");
+                int.TryParse(Console.ReadLine(), out int a);
+                if (i3 == 0 || a > answer)
+                {
+                    answer = a;
+                }
+                i3++;
+            }
+            while (i3 != n3);
+            Console.WriteLine($"Result: {answer}");
+
         }
     }
 }
