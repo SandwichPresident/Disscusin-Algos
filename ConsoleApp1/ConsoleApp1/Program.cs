@@ -32,23 +32,25 @@ namespace ConsoleApp1
             int iM = 0;
             do
             {
+                Console.Write("a = ");
                 int.TryParse(Console.ReadLine(), out numI);
                 numbers[iM] = numI;
                 iM++;
             }
             while (iM != nM);
             int half = iM / 2;
+            double median;
             if (iM % 2 ==0)
             {
                 int one = numbers[half];
                 int two = numbers[half + 1];
-                double mediam = (one + two) / 2;
+                median = (one + two) / 2;
             }
             else
             {
-                int mediam = numbers[half];
+                median = numbers[half];
             }
-
+            Console.WriteLine($"Result: {median:F2}");
 
             // Min
             int ans = 0;
