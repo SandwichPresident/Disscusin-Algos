@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //Mean Code
             double sum = 0;
             Console.Write("n = ");
             int.TryParse(Console.ReadLine(), out int n);
@@ -19,6 +20,32 @@
             while (i != n);
             double result = sum / n;
             Console.WriteLine($"Result: {result:F2}");
+
+            //Median Code
+            double num1;
+            int numI;
+            int[] numbers;
+            Console.Write("n = ");
+            int.TryParse(Console.ReadLine(), out int nM);
+            int iM = 0;
+            do
+            {
+                int.TryParse(Console.ReadLine(), out numI);
+                numbers[iM] = numI;
+                iM++;
+            }
+            while (iM != nM);
+            int half = iM / 2;
+            if (iM % 2 ==0)
+            {
+                int one = numbers[half];
+                int two = numbers[half + 1];
+                int mediam = (one + two) / 2;
+            }
+            else
+            {
+                int mediam = numbers[half];
+            }
         }
     }
 }
