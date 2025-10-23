@@ -24,12 +24,11 @@ namespace ConsoleApp1
             Console.WriteLine($"Result: {result:F2}");
 
             //Median Code
-            double num1;
             int numI;
-            
             Console.Write("n = ");
             int.TryParse(Console.ReadLine(), out int nM);
-            int[] numbers = [nM];
+            if (nM == 0) { Console.WriteLine("No result."); }
+            int[] numbers = new int[nM];
             int iM = 0;
             do
             {
