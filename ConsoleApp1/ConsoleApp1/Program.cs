@@ -23,7 +23,7 @@
 
             //Median Code
             int numI;
-            int[] numbers;
+            int[] numbers = new int[3];
             Console.Write("n = ");
             int.TryParse(Console.ReadLine(), out int nM);
             if (nM == 0) { Console.WriteLine("No result."); }
