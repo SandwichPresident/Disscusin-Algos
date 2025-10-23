@@ -22,11 +22,11 @@
             Console.WriteLine($"Result: {result:F2}");
 
             //Median Code
-            double num1;
             int numI;
             int[] numbers;
             Console.Write("n = ");
             int.TryParse(Console.ReadLine(), out int nM);
+            if (nM == 0) { Console.WriteLine("No result."); }
             int iM = 0;
             do
             {
